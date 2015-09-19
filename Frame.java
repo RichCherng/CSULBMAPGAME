@@ -19,7 +19,8 @@ public class Frame extends JFrame{
 		map.setMap(background);
 		JScrollPane mapScreen = new JScrollPane(map);
 		
-		UserInterface UI = UserInterface.getInstance();
+		//UserInterface.init();
+		//UserInterface UI = UserInterface.getInstance();
 		
 		this.add(mapScreen,BorderLayout.CENTER);
 		this.add(UI,BorderLayout.SOUTH);

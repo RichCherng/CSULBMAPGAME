@@ -11,13 +11,12 @@ import javax.swing.SpringLayout;
 public class UserInterface extends JPanel {
 
 	private static UserInterface UI = new UserInterface();
-	private WestPanel westPanel;
+	private static WestPanel westPanel;
 	//, centerPanel,
 	//eastPanel;
 	
 	private UserInterface(){
-		UI.setLayout(new SpringLayout());
-		westPanel = new WestPanel();
+		
 	}
 	
 	/**
@@ -26,5 +25,11 @@ public class UserInterface extends JPanel {
 	 */
 	public static UserInterface getInstance(){
 		return UI;
+	}
+	
+	public static void init(){
+		UI.setLayout(new SpringLayout());
+		westPanel = new WestPanel();
+		UI.add(westPanel);
 	}
 }

@@ -26,6 +26,7 @@ public class Map extends JPanel{
 	private Map(){
 	}
 	
+	
 	@Override
 	protected void paintComponent(Graphics g){
 		super.paintComponent(g);

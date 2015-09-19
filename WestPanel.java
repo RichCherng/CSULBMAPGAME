@@ -1,5 +1,6 @@
 package CSULBLMAP;
 
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -13,6 +14,9 @@ public class WestPanel extends JPanel implements ActionListener {
 
 	public WestPanel() {
 
+		this.setLayout(new GridLayout(0,1));
+
+		
 		tool_draw = "Draw a card from the deck";
 		tool_move = "Once location is selected, character will move and end turn";
 		tool_play = "Play the current card";
@@ -24,14 +28,17 @@ public class WestPanel extends JPanel implements ActionListener {
 		// draw.setActionCommand("disable");
 		draw.addActionListener(this);
 		draw.setToolTipText(tool_draw);
+		this.add(draw);
 
 		move = new JButton("Move");
 		move.addActionListener(this);
 		move.setToolTipText(tool_move);
+		this.add(move);
 
 		play = new JButton("Play Card");
 		play.addActionListener(this);
 		play.setToolTipText(tool_play);
+		this.add(play);
 	}
 
 	@Override
