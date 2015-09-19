@@ -13,13 +13,16 @@ public class Frame extends JFrame{
 		
 		
 		
+		setLayout(new BorderLayout());
+		
 		Map map = Map.getInstance();
 		map.setMap(background);
 		JScrollPane mapScreen = new JScrollPane(map);
 		
-		setLayout(new BorderLayout());
-
+		UserInterface UI = UserInterface.getInstance();
+		
 		this.add(mapScreen,BorderLayout.CENTER);
+		this.add(UI,BorderLayout.SOUTH);
 		
 		
 		

@@ -23,7 +23,7 @@ public class Map extends JPanel{
 	 * 			  - initialize scroll bar
 	 * @param img Image of the background/map of the game
 	 */
-	public Map(){
+	private Map(){
 	}
 	
 	@Override
