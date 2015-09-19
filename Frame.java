@@ -12,7 +12,9 @@ public class Frame extends JFrame{
 	public Frame(String title,BufferedImage background){
 		
 		
-		Map map = new Map(background);
+		
+		Map map = Map.getInstance();
+		map.setMap(background);
 		JScrollPane mapScreen = new JScrollPane(map);
 		
 		setLayout(new BorderLayout());

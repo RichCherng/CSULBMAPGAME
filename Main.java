@@ -15,7 +15,7 @@ public class Main {
 		} catch (IOException e) {
 			
 		}
-		
+		new Controller();
 		new Frame("CSULB",img);
 	}
 }
