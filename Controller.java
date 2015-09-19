@@ -1,13 +1,13 @@
 package CSULBLMAP;
 
+import java.awt.image.BufferedImage;
+
 public class Controller implements Runnable {
 
-	private Map map;
-	private UserInterface UI;
 
-	public Controller() {
-		map = Map.getInstance();
-		UI = UserInterface.getInstance();
+	public Controller(String title, BufferedImage background) {
+		new Frame("CSULB",background);
+		
 	}
 
 	@Override

@@ -1,5 +1,7 @@
 package CSULBLMAP;
 
+import java.awt.Dimension;
+
 import javax.swing.JPanel;
 import javax.swing.SpringLayout;
 
@@ -10,26 +12,18 @@ import javax.swing.SpringLayout;
  */
 public class UserInterface extends JPanel {
 
-	private static UserInterface UI = new UserInterface();
-	private static WestPanel westPanel;
+	private WestPanel westPanel;
 	//, centerPanel,
 	//eastPanel;
 	
-	private UserInterface(){
+	public UserInterface(int height, int width){
+		this.setLayout(new SpringLayout());
+		westPanel = new WestPanel();
+		this.add(westPanel);
+		//this.setPreferredSize(new Dimension(height,width));
+		this.setPreferredSize(new Dimension(100,100));
+		
 		
 	}
 	
-	/**
-	 * Method for returning a singleton instance of UserInterface
-	 * @return Instance of UserInterface
-	 */
-	public static UserInterface getInstance(){
-		return UI;
-	}
-	
-	public static void init(){
-		UI.setLayout(new SpringLayout());
-		westPanel = new WestPanel();
-		UI.add(westPanel);
-	}
 }

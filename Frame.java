@@ -2,6 +2,7 @@ package CSULBLMAP;
 
 
 import java.awt.BorderLayout;
+import java.awt.Button;
 import java.awt.image.BufferedImage;
 
 import javax.swing.JFrame;
@@ -15,15 +16,16 @@ public class Frame extends JFrame{
 		
 		setLayout(new BorderLayout());
 		
-		Map map = Map.getInstance();
-		map.setMap(background);
+		Map map = new Map(background);
 		JScrollPane mapScreen = new JScrollPane(map);
+		
+		UserInterface UI = new UserInterface(this.getHeight()/4,this.getWidth());
 		
 		//UserInterface.init();
 		//UserInterface UI = UserInterface.getInstance();
 		
 		this.add(mapScreen,BorderLayout.CENTER);
-		this.add(UI,BorderLayout.SOUTH);
+		this.add(UI,BorderLayout.PAGE_END);
 		
 		
 		
