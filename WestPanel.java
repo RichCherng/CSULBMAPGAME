@@ -5,12 +5,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JList;
 import javax.swing.JPanel;
 
 public class WestPanel extends JPanel implements ActionListener {
 
 	private JButton draw, move, play;
 	private String tool_draw, tool_move, tool_play;
+	private JList locationList;
 
 	public WestPanel() {
 
@@ -39,6 +41,8 @@ public class WestPanel extends JPanel implements ActionListener {
 		play.addActionListener(this);
 		play.setToolTipText(tool_play);
 		this.add(play);
+		
+		locationList = new JList(/* map node here*/);
 	}
 
 	@Override
