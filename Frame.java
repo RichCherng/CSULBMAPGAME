@@ -30,14 +30,14 @@ public class Frame extends JFrame{
 		
 		this.add(mapScreen,BorderLayout.CENTER);
 		this.add(UI,BorderLayout.PAGE_END);
-		this.setPreferredSize(new Dimension(background.getHeight(),background.getWidth()));
-		
+		//this.setPreferredSize(new Dimension(background.getHeight(),background.getWidth()));
+		this.setBounds(100, 100, this.getWidth(), this.getHeight());
 		
 		
 		this.setTitle(title);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//this.setBounds(0,0,background.getHeight(),background.getHeight());
-		//this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+		this.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		this.setLocationRelativeTo(null);
 		this.setResizable(true);
 		this.setVisible(true);

@@ -24,7 +24,7 @@ public class Map extends JPanel{
 	 */
 	public Map(BufferedImage image){
 		a = image;
-		this.setPreferredSize(new Dimension(a.getHeight(),a.getWidth()));
+		this.setPreferredSize(new Dimension(a.getWidth(),a.getHeight()));
 	}
 	
 	

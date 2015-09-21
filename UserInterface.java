@@ -2,6 +2,8 @@ package CSULBLMAP;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 
 import javax.swing.JPanel;
 
@@ -18,13 +20,20 @@ public class UserInterface extends JPanel {
 	//eastPanel;
 	
 	public UserInterface(Map m,int height, int width){
-		this.setLayout(new BorderLayout());
-		
+		this.setLayout(new GridBagLayout());
+		GridBagConstraints c = new GridBagConstraints();
+		c.weightx = .5;
+		c.weighty = .5;
+		c.gridx = 0;
+		c.gridy = 0;
 		westPanel = new WestPanel();
-		this.add(westPanel,BorderLayout.LINE_START);
+		this.add(westPanel,c);
 		
+		c.gridx = 1;
+		c.gridy = 0;
 		centerPanel = new CenterPanel();
-		this.add(centerPanel,BorderLayout.CENTER);
+		centerPanel.setPreferredSize(new Dimension(200,270));
+		this.add(centerPanel,c);
 		
 		
 		//this.setPreferredSize(new Dimension(height,width));

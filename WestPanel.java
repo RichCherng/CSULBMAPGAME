@@ -1,5 +1,6 @@
 package CSULBLMAP;
 
+import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -7,6 +8,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JList;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 
 public class WestPanel extends JPanel implements ActionListener {
 
@@ -43,6 +45,13 @@ public class WestPanel extends JPanel implements ActionListener {
 		this.add(play);
 		
 		locationList = new JList(/* map node here*/);
+		locationList.setLayoutOrientation(JList.VERTICAL);
+		
+		JScrollPane listScroller = new JScrollPane(locationList);
+		listScroller.setPreferredSize(new Dimension(200,200));
+		this.add(listScroller);
+		this.setPreferredSize(new Dimension(200,270));
+		
 	}
 
 	@Override
