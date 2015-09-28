@@ -49,8 +49,11 @@ public class WestPanel extends JPanel implements ActionListener {
 		
 		JScrollPane listScroller = new JScrollPane(locationList);
 		listScroller.setPreferredSize(new Dimension(200,200));
-		this.add(listScroller);
-		this.setPreferredSize(new Dimension(200,270));
+		//
+		locationList.setPreferredSize(new Dimension(200,100));
+		this.add(locationList);
+		//this.add(listScroller);
+		//this.setPreferredSize(new Dimension(200,270));
 		
 	}
 
