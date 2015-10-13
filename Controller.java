@@ -1,4 +1,4 @@
-package CSULBLMAP;
+    package CSULBLMAP;
 
 import java.awt.image.BufferedImage;
 import java.io.File;

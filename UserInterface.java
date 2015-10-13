@@ -55,14 +55,15 @@ public class UserInterface extends JPanel implements ActionListener {
 		centerPanel.setPreferredSize(new Dimension(200,270));
 		this.add(centerPanel,c);
 		
-		c.gridx = 0;
-		c.gridy = 3;
-		locationList = new JList(/* map node here*/);
-		locationList.setLayoutOrientation(JList.VERTICAL);
-		locationList.setPreferredSize(new Dimension(200,100));
-		this.add(locationList,c);
+		
+	//	c.gridx = 0;
+	//	c.gridy = 3;
+	//	locationList = new JList(/* map node here*/);
+	//	locationList.setLayoutOrientation(JList.VERTICAL);
+	//	locationList.setPreferredSize(new Dimension(200,100));
+	//	this.add(locationList,c);
 		//this.setPreferredSize(new Dimension(height,width));
-		this.setPreferredSize(new Dimension(300,300));
+	//	this.setPreferredSize(new Dimension(300,300));
 		
 		
 	}
